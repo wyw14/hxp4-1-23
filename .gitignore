@@ -1,0 +1,46 @@
+﻿# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+client/dist/
+server/dist/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Caches
+.cache/
+.parcel-cache/
+.vite/
+node_modules/.vite/
+.eslintcache
+*.tsbuildinfo
+
+# Runtime / temporary files
+tmp/
+temp/
+.DS_Store
+Thumbs.db
+
+# Large archives / binaries
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.iso
+*.exe
+*.msi
