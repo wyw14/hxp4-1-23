@@ -159,23 +159,11 @@ h1 {
 .color-btn.active::before {
   opacity: 1;
   filter: brightness(1.5);
-  box-shadow: 0 0 30px currentColor, 0 0 60px currentColor;
 }
 
-.color-btn.red.active {
-  box-shadow: 0 0 40px rgba(231, 76, 60, 0.8), 0 0 80px rgba(231, 76, 60, 0.4);
-}
-
-.color-btn.yellow.active {
-  box-shadow: 0 0 40px rgba(241, 196, 15, 0.8), 0 0 80px rgba(241, 196, 15, 0.4);
-}
-
-.color-btn.blue.active {
-  box-shadow: 0 0 40px rgba(52, 152, 219, 0.8), 0 0 80px rgba(52, 152, 219, 0.4);
-}
-
-.color-btn.green.active {
-  box-shadow: 0 0 40px rgba(46, 204, 113, 0.8), 0 0 80px rgba(46, 204, 113, 0.4);
+.color-btn.active {
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6), 0 0 80px rgba(255, 255, 255, 0.3) !important;
+  transform: scale(1.05);
 }
 
 .color-btn.correct {
@@ -247,6 +235,70 @@ h1 {
   font-size: 0.95rem;
 }
 
+.color-pool-section {
+  text-align: left;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid #feca57;
+  margin-bottom: 30px;
+}
+
+.color-pool-section h3 {
+  margin-bottom: 10px;
+  color: #feca57;
+}
+
+.selected-colors-info {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.color-pool {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.pool-color-btn {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.pool-color-btn:hover {
+  transform: scale(1.1);
+}
+
+.pool-color-btn.selected {
+  border-color: #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.pool-color-btn.selected::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.pool-hint {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+}
+
 @media (max-width: 500px) {
   .container {
     padding: 20px;
@@ -260,5 +312,10 @@ h1 {
   .game-board {
     gap: 10px;
     padding: 15px;
+  }
+
+  .color-pool {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
   }
 }
